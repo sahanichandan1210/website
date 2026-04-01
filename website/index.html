@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>C4 Knowledge Seekers | Official Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-10px); }
+        .step-number-bg { -webkit-text-stroke: 2px #f3f4f6; color: transparent; pointer-events: none; }
+        .group:hover .step-number-bg { -webkit-text-stroke: 2px #dbeafe; }
+        
+        /* Mobile Menu Animation */
+        #mobileMenu { transition: transform 0.3s ease-in-out; }
+        .menu-open { transform: translateX(0) !important; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 px-4 md:px-8 py-4 flex justify-between items-center">
+        <a href="./index.html">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 text-white p-2 rounded-xl font-black text-lg">C4</div>
+                <span class="text-xl font-black tracking-tighter">Knowledge Seekers</span>
+            </div>
+        </a>
+
+        <div class="hidden lg:flex gap-10 font-bold text-gray-500 text-sm uppercase tracking-wide">
+            <a href="./mcq.html" class="hover:text-blue-600 transition">MCQ Test</a>
+            <a href="./pyq.html" class="hover:text-blue-600 transition">PYQ Papers</a>
+            <a href="./practice.html" class="hover:text-blue-600 transition">Practice</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a href="#about-section"><button class="hidden md:block bg-blue-600 text-white px-8 py-2.5 rounded-full font-bold shadow-lg shadow-blue-100 active:scale-95 transition-all">About Us</button></a>
+            <button id="menuToggle" class="lg:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="fixed inset-y-0 right-0 z-[100] w-full max-w-sm bg-white shadow-2xl translate-x-full lg:hidden">
+        <div class="p-6 flex justify-between items-center border-b">
+            <span class="text-xl font-black text-blue-600">Menu</span>
+            <button id="menuClose" class="p-2 text-gray-600"><i data-lucide="x"></i></button>
+        </div>
+        <div class="flex flex-col p-8 gap-6 text-xl font-bold">
+            <a href="./mcq.html">MCQ Test</a>
+            <a href="./pyq.html">PYQ Papers</a>
+            <a href="./practice.html">Practice Questions</a>
+            <a href="#about-section" onclick="document.getElementById('menuClose').click()" class="text-blue-600">About Us</a>
+        </div>
+    </div>
+
+    <section class="bg-white py-12 md:py-28 px-6 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <span class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-6 inline-block">The Ultimate IT Resource</span>
+            <h1 class="text-3xl md:text-6xl font-black mb-6 leading-tight tracking-tight">
+                Empowering IT Students with <br class="hidden md:block">
+                <span class="text-blue-600">Free Premium Education</span>
+            </h1>
+            <p class="text-base md:text-lg text-gray-500 mb-10 max-w-3xl mx-auto">
+                Master computer science fundamentals through comprehensive video courses, practice problems, and previous year question papers.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-blue-600 text-white px-10 py-4 rounded-2xl font-black flex justify-center items-center gap-3 hover:shadow-2xl transition-all">START LEARNING</button>
+                <button class="border-2 border-gray-200 text-gray-800 px-10 py-4 rounded-2xl font-black hover:bg-gray-50 transition-all">SOLVE PYQs</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gray-50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 md:mb-20">
+                <h2 class="text-2xl md:text-4xl font-black mb-4">Your Daily Preparation in 4 Easy Steps</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border-2 border-transparent group hover:border-blue-600 transition-all duration-500 relative overflow-hidden">
+                    <span class="step-number-bg absolute -top-4 -right-4 text-7xl md:text-9xl font-black">01</span>
+                    <div class="inline-flex items-center justify-center bg-blue-600 text-white w-max px-6 h-10 rounded-full font-black text-sm mb-8 relative z-10 shadow-lg shadow-blue-100 uppercase tracking-widest">STEP</div>
+                    <h3 class="text-xl md:text-2xl font-black mb-4 relative z-10">Master Concepts</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 relative z-10">Deep-dive into lectures. We break down complex theories into simple, visual modules.</p>
+                </div>
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border-2 border-transparent group hover:border-blue-600 transition-all duration-500 relative overflow-hidden">
+                    <span class="step-number-bg absolute -top-4 -right-4 text-7xl md:text-9xl font-black">02</span>
+                    <div class="inline-flex items-center justify-center bg-blue-600 text-white w-max px-6 h-10 rounded-full font-black text-sm mb-8 relative z-10 uppercase tracking-widest">PRACTICE</div>
+                    <h3 class="text-xl md:text-2xl font-black mb-4 relative z-10">Solve Problems</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 relative z-10">Apply what you've learned. Bridge the gap between theory and code with daily challenges.</p>
+                </div>
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border-2 border-transparent group hover:border-blue-600 transition-all duration-500 relative overflow-hidden">
+                    <span class="step-number-bg absolute -top-4 -right-4 text-7xl md:text-9xl font-black">03</span>
+                    <div class="inline-flex items-center justify-center bg-blue-600 text-white w-max px-6 h-10 rounded-full font-black text-sm mb-8 relative z-10 uppercase tracking-widest">PAPERS</div>
+                    <h3 class="text-xl md:text-2xl font-black mb-4 relative z-10">Exam Strategy</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 relative z-10">Master the exam format. Review 5 years of PYQs to understand point-based scoring.</p>
+                </div>
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border-2 border-transparent group hover:border-blue-600 transition-all duration-500 relative overflow-hidden">
+                    <span class="step-number-bg absolute -top-4 -right-4 text-7xl md:text-9xl font-black">04</span>
+                    <div class="inline-flex items-center justify-center bg-blue-600 text-white w-max px-6 h-10 rounded-full font-black text-sm mb-8 relative z-10 uppercase tracking-widest">QUIZ</div>
+                    <h3 class="text-xl md:text-2xl font-black mb-4 relative z-10">Final Test</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 relative z-10">Verify your readiness. Score 90%+ on our subject MCQs to confirm exam mastery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-black">Complete Video Courses</h2>
+                    <p class="text-gray-500 mt-2">Structured playlists to get you through your IT degree.</p>
+                </div>
+                <a href="#" class="text-blue-600 font-bold hover:underline">View All Courses →</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-white border border-gray-100 rounded-3xl p-8 card-hover hover:shadow-2xl transition-all">
+                    <div class="bg-blue-50 text-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i data-lucide="database" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-black mb-2">DBMS</h4>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">SQL, Normalization, and ER Model fundamentals.</p>
+                    <div class="flex justify-between items-center pt-6 border-t border-gray-50">
+                        <span class="text-xs font-bold text-gray-400 tracking-widest uppercase">38 Videos</span>
+                        <button class="text-blue-600 font-black text-sm">WATCH</button>
+                    </div>
+                </div>
+                <div class="group bg-white border border-gray-100 rounded-3xl p-8 card-hover hover:shadow-2xl transition-all">
+                    <div class="bg-orange-50 text-orange-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                        <i data-lucide="layers" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-black mb-2">Data Structures</h4>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">From Linked Lists and Trees to Graph algorithms.</p>
+                    <div class="flex justify-between items-center pt-6 border-t border-gray-50">
+                        <span class="text-xs font-bold text-gray-400 tracking-widest uppercase">45 Videos</span>
+                        <button class="text-blue-600 font-black text-sm">WATCH</button>
+                    </div>
+                </div>
+                <div class="group bg-white border border-gray-100 rounded-3xl p-8 card-hover hover:shadow-2xl transition-all">
+                    <div class="bg-purple-50 text-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-black mb-2">Operating Systems</h4>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Scheduling, Deadlocks, and Memory Management.</p>
+                    <div class="flex justify-between items-center pt-6 border-t border-gray-50">
+                        <span class="text-xs font-bold text-gray-400 tracking-widest uppercase">32 Videos</span>
+                        <button class="text-blue-600 font-black text-sm">WATCH</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-section" class="py-20 md:py-28 bg-white px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <span class="bg-blue-50 text-blue-600 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block border border-blue-100">Our Mission</span>
+                <h2 class="text-3xl md:text-6xl font-black mb-6 text-[#111827]">What <span class="text-blue-600">Drives</span> Us!</h2>
+                <p class="text-gray-500 text-base md:text-xl max-w-4xl mx-auto font-medium mb-6 leading-relaxed">
+                    C4 Knowledge Seekers is a platform dedicated to empowering computer science and IT students with free educational resources. Our mission is to bridge the gap between theory and practice.
+                </p>
+                <a href="#about-section" class="text-blue-600 font-black text-lg hover:underline underline-offset-8 transition-all">Learn more about us →</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group bg-white p-8 md:p-10 rounded-[2.5rem] border-2 border-gray-50 shadow-sm hover:border-blue-600 transition-all duration-500">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-all">
+                        <i data-lucide="target" class="text-white w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black mb-4 text-gray-900 group-hover:text-blue-600">Clear Mission</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Bridge the gap between theory and practice with comprehensive learning materials.</p>
+                </div>
+                <div class="group bg-white p-8 md:p-10 rounded-[2.5rem] border-2 border-gray-50 shadow-sm hover:border-blue-600 transition-all duration-500">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-all">
+                        <i data-lucide="users" class="text-white w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black mb-4 text-gray-900 group-hover:text-blue-600">Student-Focused</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Dedicated to empowering computer science and IT students worldwide.</p>
+                </div>
+                <div class="group bg-white p-8 md:p-10 rounded-[2.5rem] border-2 border-gray-50 shadow-sm hover:border-blue-600 transition-all duration-500">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-all">
+                        <i data-lucide="award" class="text-white w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black mb-4 text-gray-900 group-hover:text-blue-600">Quality Content</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Carefully crafted courses and materials for academic excellence.</p>
+                </div>
+                <div class="group bg-white p-8 md:p-10 rounded-[2.5rem] border-2 border-gray-50 shadow-sm hover:border-blue-600 transition-all duration-500">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-all">
+                        <i data-lucide="briefcase" class="text-white w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black mb-4 text-gray-900 group-hover:text-blue-600">Career Ready</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Prepare students for professional pursuits with practical knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 mb-20">
+        <div class="max-w-7xl mx-auto relative p-10 md:p-20 rounded-[3rem] bg-blue-600 flex flex-col lg:flex-row items-center justify-between gap-12 overflow-hidden shadow-2xl">
+            <div class="absolute top-[-20%] right-[-10%] w-96 h-96 bg-blue-500 rounded-full opacity-50"></div>
+            <div class="relative z-10 text-center lg:text-left">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight">Ready to Excel in Your Exams?</h2>
+                <p class="text-blue-100 text-lg md:text-xl font-medium max-w-2xl">Download free Previous Year Question Papers today!</p>
+            </div>
+            <a href="./pyq.html">
+                <button class="relative z-10 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-4 hover:bg-blue-50 active:scale-95 transition-all">
+                    <i data-lucide="download" class="w-6 h-6 stroke-[3px]"></i> Download PYQ Papers
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-white py-16 md:py-20 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div class="md:col-span-2 flex flex-col items-center md:items-start">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg font-bold">C4</div>
+                    <span class="text-2xl font-black tracking-tight">Knowledge Seekers</span>
+                </div>
+                <p class="text-gray-400 text-sm md:text-lg max-w-sm">Empowering the next generation of IT leaders with free resources.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-black mb-6">Explore</h4>
+                <ul class="text-gray-400 space-y-4 font-semibold text-sm">
+                    <li><a href="./mcq.html">MCQ Quizzes</a></li>
+                    <li><a href="./pyq.html">PYQ Papers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-black mb-6">Connect</h4>
+                <div class="flex justify-center md:justify-start gap-4">
+                    <a href="#" class="bg-gray-900 p-4 rounded-2xl hover:bg-blue-600 transition-all"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                    <a href="#" class="bg-gray-900 p-4 rounded-2xl hover:bg-blue-600 transition-all"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => { mobileMenu.classList.add('menu-open'); document.body.style.overflow = 'hidden'; });
+        menuClose.addEventListener('click', () => { mobileMenu.classList.remove('menu-open'); document.body.style.overflow = 'auto'; });
+    </script>
+</body>
+</html>
